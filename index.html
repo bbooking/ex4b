@@ -70,12 +70,13 @@
 			$("button").click(function(){
 			   var t = $('#temp').val();//celsius
 			   var u = $('#unit').val();
-			   
-			   
-			   
-			   
-			   
-			   alert("Temperature is "+t1+" in "+u1);
+			   var [t1,u1] = tempCal(t,u);
+
+               if (validate(t)){
+                let result =document.getElementById("result");
+                result.innerText = "Temperature is "+t1+" in "+u1;
+               }
+
 			});
 		});
 	</script>
